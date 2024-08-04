@@ -1,0 +1,366 @@
+body{
+    background-color: black;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+nav{
+    background-color: #000;
+    overflow: hidden;
+    z-index: 100;
+}
+.logo{
+    width: 160px;
+    height: auto;
+    margin: 10px;
+    padding-left: 20px;
+}
+.nav-item {
+    position: relative;
+}
+#navbars .nav-link::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+#navbars .nav-link:hover {
+    color: #6b6666;
+}
+#navbars .nav-link:hover::after {
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .navbar-collapse {
+        text-align: right;
+    }
+    #navbars .nav-link::after{
+        display: none;
+    }
+    #navbars .nav-link:hover{
+        color: #ff0000;
+    }
+    .navbar-collapse.sidebar {
+        position: fixed;
+        top: 85px;
+        right: 0;
+        text-align: center;
+        height: 400px;
+        width: 150px;
+        background-color: hsla(0, 0%, 20%, 0.741); 
+        padding-top: 56px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.sidebar.show {
+        transform: translateX(0);
+    }
+
+}
+
+
+
+.home-cont{
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#propic {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+span,.intro{
+    color: #ff0000;
+}
+.text h1{
+    font-size: 50px;
+}
+.text{
+    font-size: 19px;
+    color: white;
+}
+.intro{
+    padding-bottom: 35px;
+}
+.follow .ic{
+    margin-top: 80px;
+    margin-left: 15px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.503);
+}
+.follow .ic:hover{
+    color: rgba(255, 255, 255, 0.956);
+    scale: 1.09;
+}
+.resume{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#dwld{
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#dwld:hover{
+    background-color: #f50707ea;
+    color: #ddd;
+}
+
+
+
+#about{
+    padding: 50px 20px;
+}
+#aboutme{
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-radius: 15px;
+}
+#mypic{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px rgba(6, 6, 6, 0.919);
+}
+#aboutme h1{
+    
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#readmore {
+    display: none;
+    color: #ffffff;
+}
+#readmoreBtn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#readmoreBtn:hover{
+    background-color: #f50707ea;
+    color: #ddd;
+}
+#aboutme p{
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #ddd;
+}
+@media (max-width: 768px){
+    #mypic{
+        display: none;
+    }
+    .card-text{
+        display: none;
+    }
+    .procard{
+        display: none;
+    }
+    
+}  
+
+#ski{
+    background-color: #000;
+    margin-left: auto;
+    margin-right: auto;
+}
+#ski h1{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.items {
+    background-color:  hsl(0, 0%, 20%);
+    color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.items h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.prog{
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 10px;
+}
+.prog-bar {
+    background-color: #ff0000;
+    height: 100%;
+    width: 0; 
+    text-align: center;
+    color: white;
+    line-height: 10px; 
+    border-radius: 10px;
+    animation: progressBarAnimation 4s ease-out infinite;
+}
+@keyframes progressBarAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(width);
+    }
+}
+#skills h2{
+    font-size: 25px;
+    color: #ffffffca;
+    margin-bottom: 30px;
+}
+.circle-ski{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cri {
+    position: relative;
+    left: 30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#ff0000 0%, #4caf50 var(--percentage), #ddddddcf var(--percentage), #ddd 100%);
+    
+}
+.cri-pro{
+    margin-left: 74px;
+    margin-top: 13px;
+    
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.81);
+}
+.cri-txt {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+}
+@media (min-width: 768px){
+    #ski{
+        margin-left: 85px;
+        margin-right: 85px;
+    }
+}
+
+
+
+.proimg{
+    width: 100%;
+    height: 260px;
+    
+}
+#projects h1{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 100px;
+}
+#projects h5{
+
+    color: #ff0000;
+    
+}
+#projects p{
+    color: #efe6e6;
+}
+.procard{
+    margin-bottom: 30px;
+    background-color: hsla(0, 0%, 0%, 0.868);
+}
+.button3{
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button3:hover{
+    background-color: #f50707ea;
+    color: #ddd;
+}
+
+
+#projects {
+    padding: 60px 0;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+.contacthead{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#name,#email,#message{
+    background-color: #000;
+    border-color: #ffffffca;
+    margin: 15px 0px;
+}
+#contact h5{
+    color: #ffffffca;
+}
+.icons-con{
+    color: #ffffffca;
+    text-align: center;
+    font-size: 20px;
+}
+.social{
+    color: #ffffffca;
+    text-align: center;
+   
+}
+.soc-ico{
+    color: rgba(255, 255, 255, 0.503);
+    font-size: 25px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.soc-ico:hover{
+    color: rgba(255, 255, 255, 0.956);
+    scale: 1.3;
+}
+.icons-con .ico{
+    margin-right: 10px;
+}
+.contactgrp{
+   margin-top: 60px ;
+}
